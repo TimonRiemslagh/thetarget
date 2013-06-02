@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Target</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>The Target <span class="extra"></span></h1>
+            <p class="timeuntil"></p>
+        </header>
+        
+        <div class="content">
+            <div id="myMap">
+            </div>
+        </div>
+
+        <p class="announcement"></p>
+
+        <input type="button" value="herlaad/herleef" id="revive" />
+
+        <div class="info">
+        </div>
+
+        <div class="infoObject">
+        </div>
+
+        <footer>
+            <p>Created by Timon Riemslagh</p>
+        </footer>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFqzHYaWEdAgaiIANQ_js9uEX9ImI91Qs&sensor=false"></script>
+    <script src="js/MapHandler.js"></script>
+    <script src="js/client.js"></script>
+</body>
+</html>
