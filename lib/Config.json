@@ -1,0 +1,303 @@
+{
+	"hqPolice": {
+		"x": "51.012",
+		"y": "4.012",
+		"symbol": "./img/hpPoliceb.png"
+	},
+
+	"hqCriminal": [
+
+		{
+			"x": "50.988",
+			"y": "3.988",
+			"symbol": "./img/hideout.png"
+		},
+		{
+			"x": "50.988",
+			"y": "4",
+			"symbol": "./img/hideout.png"
+		},
+		{
+			"x": "51",
+			"y": "3.988",
+			"symbol": "./img/hideout.png"
+		},
+		{
+			"x": "50.988",
+			"y": "3.968",
+			"symbol": "./img/hideout.png"				
+		}
+
+	],
+
+	"startPositions": [
+		{
+			"uid": "0",
+			"x": "51",
+			"y": "4"
+		},
+		{
+			"uid": "1",
+			"x": "51.01",
+			"y": "4"
+		},
+		{
+			"uid": "2",
+			"x": "51",
+			"y": "4.01"
+		},
+		{
+			"uid": "3",
+			"x": "51.01",
+			"y": "4.01"
+		}
+	],
+
+	"objects": [
+		{
+			"id": "0",
+			"name": "touw",
+			"place": {
+				"x": "51.012",
+				"y": "4"
+				},
+			"symbol": "./img/rope.png"
+		},
+		{
+			"id": "1",
+			"name": "mes",
+			"place": {
+				"x": "51",
+				"y": "4.012"
+				},
+			"symbol": "./img/mes.png"
+		},
+		{
+			"id": "2",
+			"name": "ladder",
+			"place": {
+				"x": "51",
+				"y": "4.008"
+				},
+			"symbol": "./img/ladder.png"
+		},
+		{
+			"id": "3",
+			"name": "tang",
+			"place": {
+				"x": "51.002",
+				"y": "4.012"
+				},
+			"symbol": "./img/tang.png"
+		},
+		{
+			"id": "4",
+			"name": "plank",
+			"place": {
+				"x": "50.995786638516286",
+				"y": "4.026264190673828"
+				},
+			"symbol": "./img/plank.png"
+		},
+		{
+			"id": "6",
+			"name": "bom",
+			"place": {
+				"x": "50.991572894437155",
+				"y": "4.009098052978516"
+				},
+			"symbol": "./img/bom.png"
+		},
+		{
+			"id": "7",
+			"name": "pan",
+			"place": {
+				"x": "51.00702141896005",
+				"y": "4.02446174621582"
+				},
+			"symbol": "./img/pan.png"
+		},
+		{
+			"id": "8",
+			"name": "schop",
+			"place": {
+				"x": "51.002862706809836",
+				"y": "4.033044815063477"
+				},
+			"symbol": "./img/schop.png"
+		},
+		{
+			"id": "9",
+			"name": "lucifers",
+			"place": {
+				"x": "50.99600271764293",
+				"y": "3.989957809448242"
+				},
+			"symbol": "./img/lucifers.png"
+		}
+	],
+
+	"crimes":
+	[
+		{
+			"id": "0",
+			"name": "saboteer de politie",
+			"reward": "150000",
+			"place": {
+				"x": "50.994868291003016",
+				"y": "3.978628158569336"
+				},
+			"symbol": "./img/crime1.png",
+			"listObjects": [
+				{"id": "0"}, {"id": "1"}
+			],
+			"objects": [
+				{"obj": "touw"},
+				{"obj": "mes"}
+			]
+		},
+		{
+			"id": "1",
+			"name": "overval een winkel",
+			"reward": "100000",
+			"place": {
+				"x": "51.00518515047026",
+				"y": "3.975109100341797"
+				},
+			"symbol": "./img/crime2.png",
+			"listObjects": [{"id": "1"}],
+			"objects": [
+				{"obj": "mes"}
+			]
+		},
+		{
+			"id": "2",
+			"name": "blaas het politiebureau op",
+			"reward": "150000",
+			"place": {
+				"x": "51.00618515047026",
+				"y": "3.955109100341797"
+				},
+			"symbol": "./img/crime3.png",
+			"listObjects": [
+				{"id": "2"}, {"id": "6"}
+			],
+			"objects": [
+				{"obj": "ladder"},
+				{"obj": "bom"}
+			]
+		},
+		{
+			"id": "3",
+			"name": "blokkeer de weg",
+			"reward": "150000",
+			"place": {
+				"x": "51.00218515047026",
+				"y": "3.976109100341797"
+				},
+			"symbol": "./img/crime4.png",
+			"listObjects": [
+				{"id": "4"}
+			],
+			"objects": [
+				{"obj": "plank"}
+			]
+		},
+		{
+			"id": "4",
+			"name": "blokkeer de ingang",
+			"reward": "150000",
+			"place": {
+				"x": "51.00618515047026",
+				"y": "3.987109100341797"
+				},
+			"symbol": "./img/crime5.png",
+			"listObjects": [
+				{"id": "4"}
+			],
+			"objects": [
+				{"obj": "plank"}
+			]
+		},
+		{
+			"id": "5",
+			"name": "steel politiewagen",
+			"reward": "250000",
+			"place": {
+				"x": "51.00518515047026",
+				"y": "3.994109100341797"
+				},
+			"symbol": "./img/crime6.png",
+			"listObjects": [
+				{"id": "0"},
+				{"id": "1"},
+				{"id": "3"}
+			], 
+			"objects": [
+				{"obj": "touw"},
+				{"obj": "mes"}, 
+				{"obj": "tang"}
+			]
+		},
+		{
+			"id": "6",
+			"name": "begraaf het bewijs",
+			"reward": "250000",
+			"place": {
+				"x": "51.00618515047026",
+				"y": "3.984109100341797"
+				},
+			"symbol": "./img/crime7.png",
+			"listObjects": [
+				{"id": "8"},
+				{"id": "7"}
+			],
+			"objects": [
+				{"obj": "pan"},
+				{"obj": "schop"}
+			]
+		},
+		{
+			"id": "7",
+			"name": "verbrand een brievenbus",
+			"reward": "100000",
+			"place": {
+				"x": "51.00119715047026",
+				"y": "3.965809100341797"
+				},
+			"symbol": "./img/crime8.png",
+			"listObjects": [{"id": "6"}],
+			"objects": [
+				{"obj": "bom"}
+			]
+		}
+
+	],
+
+	"persons":
+	[
+		{
+			"uid": "0",
+			"name": "boef",
+			"color": "red"
+		},
+
+		{
+			"uid": "1",
+			"name": "politie1",
+			"color": "green"
+		},
+
+		{
+			"uid": "2",
+			"name": "politie2",
+			"color": "yellow"
+		},
+
+		{
+			"uid": "3",
+			"name": "politie3",
+			"color": "blue"
+		}
+	]
+}
