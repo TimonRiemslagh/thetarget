@@ -30,15 +30,26 @@ app.get('/', function (req, res) {
 });
 
 io.sockets.on('connection', function(socket) {
+	var counterCriminal = 360;
+	var counterPolice = 180;
+
 	// show all on police
 	setInterval(function() {
 		socket.emit('showCriminal');
+		counterCriminal = 360;
 	}, 362000);
 
 	// show all on criminal
 	setInterval(function() {
+		counterPolice = 180;
 		socket.emit('showPolice');
 	}, 182000);
+
+	setInterval(function() {
+		counterPolice--;
+		counterCriminal--;
+		socket.emit('updateTimer', { 'cc': counterCriminal, 'cp': counterPolice });
+	}, 1000);
 	
 	
 	addClient(l, socket, coords[l], DrawMaps);
@@ -162,14 +173,6 @@ function Person(uid, socket, symbol, type) {
 		}
 		
 	}
-}
-
-function startTimer(seconds, socket) {
-	socket.emit('updateTimer', seconds);
-	setInterval(function() {
-		seconds--;
-		socket.emit('updateTimer', seconds);
-	}, 1000);
 }
 
 function DrawMaps(clients, positions) {

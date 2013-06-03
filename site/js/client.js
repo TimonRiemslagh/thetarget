@@ -5,9 +5,12 @@ var crimeMarkers;
 var uid;
 var hqPolice;
 var hqCriminal;
+var timer;
 
 $(document).ready(function() {
 	var map = document.getElementById('myMap');
+	timer = $('#counter');
+
 	socket.on('drawMap', function(data) {
 		drawMap(data, map, socket);
 	});
@@ -90,7 +93,6 @@ $(document).dblclick(function() {
 });
 
 function drawMap(data, map, socket) {
-	console.log(data.crimes[0].objects);
 	// set some info in the title
 	if(data.type == "boef") {
 		$('.extra').html("- boef team - " + "<span>rood</span>");
@@ -296,7 +298,11 @@ function reviveNo() {
 }
 
 function updateTimer(data) {
-	$('.timer').html(data);
+	if(uid == 0) {
+		timer.html(data.cp);
+	} else {
+		timer.html(data.cc);
+	}
 }
 
 
